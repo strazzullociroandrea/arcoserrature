@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import conversioneMappaCilindro from "../assets/lavori/conversione-mappa-cilindro.jpg";
+import serrandaAlbero from "../assets/lavori/serranda-albero.webp";
+import maniglione from "../assets/lavori/maniglione.webp";
+import box from "../assets/lavori/box.webp";
+import inferriate from "../assets/lavori/inferriate.webp";
+
+const works = [
+    {
+        image: conversioneMappaCilindro,
+        alt: "Installazione cilindro europeo ad alta sicurezza con defender su porta blindata",
+        title: "Conversione a cilindro europeo",
+        description: "Sostituzione serratura da doppia mappa a cilindro europeo.",
+    },
+    {
+        image: serrandaAlbero,
+        alt: "Motorizzazione serranda avvolgibile e sostituzione molle",
+        title: "Motorizzazione serranda e cambio molle",
+        description: "Installazione motore, regolazione finecorsa e sostituzione molle usurate.",
+    },
+    {
+        image: maniglione,
+        alt: "Montaggio maniglione antipanico su uscita di sicurezza",
+        title: "Sostituzione maniglione antipanico",
+        description: "Installazione maniglione antipanico su porte di sicurezza.",
+    },
+    {
+        image: box,
+        alt: "Sostituzione serratura di sicurezza su porta del box",
+        title: "Serratura box",
+        description: "Apertura e sostituzione della serratura del box bloccata.",
+    },
+    {
+        image: inferriate,
+        alt: "Installazione e riparazione inferriate di sicurezza con sostituzione serrature",
+        title: "Installazione e riparazione inferriate",
+        description: "Posa inferriate di sicurezza, riparazione serrature e ferramenta.",
+    },
+];
+---
+
+<section id="lavori" class="w-full bg-zinc-950 py-16 sm:py-24 border-b border-zinc-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-12">
+            <p class="text-xs font-semibold uppercase tracking-widest text-amber-400">
+                Lavori svolti
+            </p>
+            <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                Alcune foto dai nostri interventi
+            </h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-x-8 gap-y-12">
+            {works.map((work) => (
+                    <figure class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] space-y-4 text-center">
+                        <div class="overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <Image
+                                    src={work.image}
+                                    alt={work.alt}
+                                    width={900}
+                                    class="w-full h-64 object-cover object-center mx-auto"
+                            />
+                        </div>
+                        <figcaption class="space-y-1 max-w-sm mx-auto">
+                            <h3 class="text-base font-bold text-white">{work.title}</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed">{work.description}</p>
+                        </figcaption>
+                    </figure>
+            ))}
+        </div>
+    </div>
+</section>
