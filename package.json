@@ -12,6 +12,23 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.13"
+    "@astrojs/react": "^7.0.0",
+    "@astrojs/solid-js": "^7.0.2",
+    "@astrojs/svelte": "^9.0.1",
+    "@astrojs/vue": "^7.0.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.3",
+    "lucide-react": "^1.47.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0"
   }
 }
