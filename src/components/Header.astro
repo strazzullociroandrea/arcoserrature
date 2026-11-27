@@ -2,7 +2,7 @@
 import {Phone} from "lucide-react"
 ---
 
-<header class="fixed w-full top-0 z-50 backdrop-blur-md bg-white/90 border-b border-zinc-200/80 shadow-sm transition-all">
+<header class="fixed inset-x-0 top-0 z-50 w-full backdrop-blur-md bg-white/90 border-b border-zinc-200/80 shadow-sm transition-all">
     <div class="max-w-7xl px-3 sm:px-6 mx-auto">
         <div class="flex items-center justify-between h-18 sm:h-20">
 
@@ -20,17 +20,21 @@ import {Phone} from "lucide-react"
                 </div>
             </a>
 
-            <div class="flex items-center space-x-3 hidden sm:flex">
+            <div class="flex items-center">
                 <a
                         href="tel:+393333107476"
-                        class="inline-flex group relative items-center space-x-2.5 sm:space-x-3 bg-amber-500 hover:bg-amber-600 text-zinc-950 px-3.5 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl font-bold shadow-md shadow-amber-500/20 active:scale-95 transition-all duration-200"
+                        aria-label="Chiama Arco Serrature al 333 310 7476"
+                        class="inline-flex group relative items-center gap-2 sm:gap-3 bg-amber-500 hover:bg-amber-600 text-zinc-950 px-2.5 py-2 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl font-bold shadow-md shadow-amber-500/20 active:scale-95 transition-all duration-200"
                 >
-                    <div class="p-1.5 bg-white/30 rounded-lg sm:rounded-xl group-hover:rotate-12 transition-transform">
+                    <div class="p-1 bg-white/30 rounded-lg sm:p-1.5 sm:rounded-xl group-hover:rotate-12 transition-transform">
                         <Phone size={18}/>
                     </div>
                     <div class="flex flex-col text-left">
                         <span class="hidden sm:block text-[10px] uppercase tracking-wider font-semibold text-zinc-900/75 leading-none mb-0.5">Chiamaci</span>
-                        <span class="text-xs sm:text-sm font-extrabold tracking-wide leading-tight">333 310 7476</span>
+                        <span class="text-xs sm:text-sm font-extrabold tracking-wide leading-tight">
+                            <span class="sm:hidden">Chiama</span>
+                            <span class="hidden sm:inline">333 310 7476</span>
+                        </span>
                     </div>
                 </a>
             </div>

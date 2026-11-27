@@ -40,7 +40,7 @@ const works = [
 ];
 ---
 
-<section id="lavori" class="p-4 w-full bg-zinc-950 py-16 sm:py-24 border-b border-zinc-800">
+<section id="lavori" class="w-full bg-zinc-950 py-14 sm:py-20 lg:py-24 border-b border-zinc-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto text-center mb-12">
             <p class="text-xs font-semibold uppercase tracking-widest text-amber-400">
@@ -51,15 +51,15 @@ const works = [
             </h2>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-x-8 gap-y-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {works.map((work) => (
-                    <figure class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] space-y-4 text-center">
+                    <figure class="group min-w-0 space-y-4 text-center">
                         <div class="overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800">
                             <Image
                                     src={work.image}
                                     alt={work.alt}
                                     width={900}
-                                    class="w-full h-64 object-cover object-center mx-auto"
+                                    class="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                             />
                         </div>
                         <figcaption class="space-y-1 max-w-sm mx-auto">
